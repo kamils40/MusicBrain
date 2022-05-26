@@ -30,7 +30,6 @@ public class RequestService {
     }
     public List<Result> getSongInformation(int amount) {
         List<String> randomWords = getRandomWords(amount);
-        System.out.println("Words size:" + randomWords.size());
         List<Result> results = new ArrayList<>();
         for (String word : randomWords) {
             try {

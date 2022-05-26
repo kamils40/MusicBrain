@@ -22,7 +22,6 @@ public class Menu {
             else if (number > 20 | number < 5) {
                 System.out.println("Number is too big or too small, try again");
             } else {
-                System.out.println(number);
                 List<Result> results = requestService.getSongInformation(number);
                 results.stream().forEach(System.out::println);
                 System.out.println("Do you wanna make another search? no if you wanna exit");
