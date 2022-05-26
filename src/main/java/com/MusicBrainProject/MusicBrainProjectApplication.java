@@ -11,17 +11,8 @@ import java.util.List;
 public class MusicBrainProjectApplication {
 
 	public static void main(String[] args) {
-		RequestService requestService = new RequestService();
-		List<String> randoms;
-		try {
-			randoms = requestService.getRandomWords(15);
-			List<Result> songInformations = requestService.getSongInformation(randoms);
-			for (Result r : songInformations) {
-				System.out.println(r.getRandomWord() + " - " + r.getSongInformation());
-			}
-		} catch (IOException | InterruptedException e) {
-			System.out.println(e.getMessage());
-		}
+		final Menu menu= new Menu();
+		menu.print();
 
 	}
 

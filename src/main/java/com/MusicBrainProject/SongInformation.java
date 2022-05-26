@@ -10,5 +10,12 @@ public class SongInformation {
     private String artistName;
     private String recordingTitle;
 
-
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer();
+        sb.append("Artist: ").append(artistName).append(" ");
+        sb.append("Album: ").append(albumName).append(" ");
+        sb.append("Track: ").append(recordingTitle);
+        return sb.toString();
+    }
 }
